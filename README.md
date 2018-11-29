@@ -8,7 +8,7 @@
 
 ## [节点描述](https://github.com/OS-Q/M12/wiki) 
 
-M12深度加速节点，启用（租用）更专业更强大的的设备加速处理过程，完成无法通过增加边缘设备数量完成的内容
+M12深度加速节点，临时启用（租用）更专业更强大的的设备加速处理过程，完成无法通过增加边缘设备数量完成的内容
 
 ### 共用资源
 
@@ -19,19 +19,19 @@ M12深度加速节点，启用（租用）更专业更强大的的设备加速�
 
 ## [包含平台](https://github.com/OS-Q/M12/wiki/index) 
 
-#### W49：[工作站](https://github.com/OS-Q/W49)
+#### W49：[Win电脑](https://github.com/OS-Q/W49)
 
-个人工作站电脑
+消费级windows电脑
 
-#### W50：[服务器](https://github.com/OS-Q/W50)
+#### W50：[私有云](https://github.com/OS-Q/W50)
 
-服务器器群组
+私有云Linux服务器
 
-#### W51：[云平台](https://github.com/OS-Q/W47)
+#### W51：[公有云](https://github.com/OS-Q/W51)
 
-云服务商服务
+公有云服务商服务
 
-#### W52：[超算中心](https://github.com/OS-Q/W48)
+#### W52：[超算中心](https://github.com/OS-Q/W52)
 
 超级计算中心服务
 
@@ -53,6 +53,6 @@ M12深度加速节点，启用（租用）更专业更强大的的设备加速�
 
 ---
 
-###  [Q redefined the scope of operation system](http://www.OS-Q.com)
+###  [Q redefined the scope of Operation System](http://www.OS-Q.com)
 ###  qitas@qitas.cn
-###  2018-11-28
+###  2018-11-29
