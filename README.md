@@ -1,28 +1,19 @@
-﻿# [信息呈现](https://github.com/OS-Q/M12) 
+﻿# [Framework 52](https://github.com/OS-Q/M3F) 
 [![sites](OS-Q/OS-Q.png)](http://www.OS-Q.com)
-#### 归属数据消费：[Q4](https://github.com/OS-Q/Q4)
+#### 关联无线设备：[M3](https://github.com/OS-Q/M3)
 #### 关于系统架构：[OS-Q](https://github.com/OS-Q/OS-Q)
-Edge-Q -> 体系 Q[1,4] -> 节点 M[1,12] -> 平台 W[1,52] -> 设备 D[1,365]
-## [节点描述](https://github.com/OS-Q/M12/wiki) 
 
-信息呈现节点，用于向人传达信息，完成人的数据消费过程。
+[EDGE-Q](https://github.com/OS-Q/EDGE-Q) -> Q[4] -> M[12] -> W[52] -> D[365]
 
-### [节点资源](https://github.com/OS-Q/M12) 
+## [节点描述](https://github.com/OS-Q/M3F/wiki) 
+
+
+
+### [节点资源](https://github.com/OS-Q/M3F) 
 
 - [资源](src/)
 - [文档](docs/)
 
-### [节点结构](https://github.com/OS-Q/Q4)
-
-* Q4：[数据消费](https://github.com/OS-Q/Q4)
-    * M10：[状态输出](https://github.com/OS-Q/M10)
-    * M11：[数据驱动](https://github.com/OS-Q/M11)
-    * M12：[信息呈现](https://github.com/OS-Q/M12)
-        * W49：[显示面板](https://github.com/OS-Q/W49)
-        * W50：[数据终端](https://github.com/OS-Q/W50)
-        * W51：[视频设备](https://github.com/OS-Q/W51)
-        * W52：[网络服务](https://github.com/OS-Q/W52)
-
-### [OS-Q : Operation System for edge devices](http://www.OS-Q.com/Edge/M12)
-####  2019-4-20  
+### [OS-Q : Open Solutions & Open Sources](http://www.OS-Q.com/M3F)
+####  2019-8-17
 
