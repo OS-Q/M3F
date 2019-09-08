@@ -11,8 +11,8 @@
         "board_def": "BOARD_SIPEED_MAIX_ONE_DOCK"
     },
     "frameworks": [
-        "kendryte-standalone-sdk",
-        "kendryte-freertos-sdk",
+        "framework-K210",
+        "framework-K210rtos",
         "arduino"
     ],
     "name": "Sipeed MAIX ONE DOCK",
