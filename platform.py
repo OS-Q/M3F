@@ -2,7 +2,7 @@
 from platformio.managers.platform import PlatformBase
 
 
-class Kendryte210Platform(PlatformBase):
+class K210Platform(PlatformBase):
 
     def get_boards(self, id_=None):
         result = PlatformBase.get_boards(self, id_)
