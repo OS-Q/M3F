@@ -19,15 +19,15 @@
     ],
     "frameworks": {
         "kendryte-standalone-sdk": {
-            "package": "framework-kendryte-standalone-sdk",
-            "script": "builder/frameworks/kendryte-standalone-sdk.py"
+            "package": "framework-K210",
+            "script": "builder/frameworks/kendryte-K210.py"
         },
         "kendryte-freertos-sdk": {
-            "package": "framework-kendryte-freertos-sdk",
-            "script": "builder/frameworks/kendryte-freertos-sdk.py"
+            "package": "framework-K210rtos",
+            "script": "builder/frameworks/kendryte-freertos.py"
         },
         "arduino":{
-            "package": "framework-maixduino",
+            "package": "framework-K210arduino",
             "script": "builder/frameworks/arduino.py"
         }
     },
@@ -36,20 +36,20 @@
             "type": "toolchain",
             "version": "~8.2.0"
         },
-        "framework-maixduino": {
+        "framework-K210arduino": {
             "type": "framework",
             "optional": true,
-            "version": "~0.3.9"
+            "version": "https://github.com/OS-Q/N27.git"
         },
-        "framework-kendryte-standalone-sdk": {
+        "framework-K210": {
             "type": "framework",
             "optional": true,
-            "version": "~0.5.4"
+            "version": "https://github.com/OS-Q/N29.git"
         },
-        "framework-kendryte-freertos-sdk": {
+        "framework-K210rtos": {
             "type": "framework",
             "optional": true,
-            "version": "~0.7.0"
+            "version": "https://github.com/OS-Q/N28.git"
         },
         "tool-kflash-kendryte210": {
             "type": "uploader",
