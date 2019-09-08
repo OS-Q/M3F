@@ -8,7 +8,7 @@ env = DefaultEnvironment()
 
 FRAMEWORK_DIR = env.PioPlatform().get_package_dir("framework-K210arduino")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
-SDK_DIR = join(FRAMEWORK_DIR, "cores", "arduino", "standalone")
+SDK_DIR = join(FRAMEWORK_DIR, "cores", "arduino", "kendryte-standalone-sdk")
 
 env.SConscript("_bare.py", exports="env")
 
