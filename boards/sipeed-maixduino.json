@@ -11,8 +11,8 @@
         "board_def": "BOARD_SIPEED_MAIXDUINO"
     },
     "frameworks": [
-        "framework-K210",
-        "framework-K210rtos",
+        "standalone",
+        "freertos",
         "arduino"
     ],
     "name": "Sipeed MAIXDUINO",

@@ -18,11 +18,11 @@
         "http://dl.platformio.org/packages/manifest.json"
     ],
     "frameworks": {
-        "framework-K210": {
+        "standalone": {
             "package": "framework-K210",
             "script": "builder/frameworks/kendryte-K210.py"
         },
-        "framework-K210rtos": {
+        "freertos": {
             "package": "framework-K210rtos",
             "script": "builder/frameworks/kendryte-K210rtos.py"
         },
