@@ -2,7 +2,7 @@
 from platformio.managers.platform import PlatformBase
 
 
-class K210Platform(PlatformBase):
+class H13Platform(PlatformBase):
 
     def get_boards(self, id_=None):
         result = PlatformBase.get_boards(self, id_)
