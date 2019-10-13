@@ -5,12 +5,7 @@
 
 ### [Platform描述](https://github.com/OS-Q/H13/wiki) 
 
-[Platform H13](https://github.com/OS-Q/H13)基于 PlatformIO平台开发
-
-### [Framework资源](https://github.com/OS-Q) 
-
-* [Framework N27](https://github.com/OS-Q/N27)
-* [Framework N28](https://github.com/OS-Q/N28)
+[Platform H13](https://github.com/OS-Q/H13)基于PlatformIO平台，用于K210固件开发
 
 ### [OS-Q = Open Solutions | Open Source |  Operating System ](http://www.OS-Q.com/H13)
 ####  2019-9-8

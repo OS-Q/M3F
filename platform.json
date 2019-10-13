@@ -1,10 +1,10 @@
 {
-    "name": "K210",
-    "title": "K210",
-    "description": "Kendryte K210 双核 RISCV 64 SoC, Sipeed出品，具有1TOPS算力.",
+    "name": "H13",
+    "title": "H13",
+    "description": "K210开发平台",
     "url": "http://www.sipeed.com",
     "homepage": "https://github.com/OS-Q/H13",
-    "license": "Apache-2.0",
+    "license": " ",
     "engines": {
         "platformio": "<5"
     },
@@ -18,38 +18,38 @@
         "http://dl.platformio.org/packages/manifest.json"
     ],
     "frameworks": {
-        "standalone": {
-            "package": "framework-K210",
-            "script": "builder/frameworks/kendryte-K210.py"
+        "kendryte": {
+            "package": "framework-N29",
+            "script": "builder/frameworks/kendryte.py"
         },
         "freertos": {
-            "package": "framework-K210rtos",
-            "script": "builder/frameworks/kendryte-K210rtos.py"
+            "package": "framework-N28",
+            "script": "builder/frameworks/freertos.py"
         },
         "arduino":{
-            "package": "framework-K210arduino",
+            "package": "framework-N27",
             "script": "builder/frameworks/arduino.py"
         }
     },
     "packages": {
-        "toolchain-kendryte210": {
-            "type": "toolchain",
-            "version": "~8.2.0"
-        },
-        "framework-K210arduino": {
+        "framework-N27": {
             "type": "framework",
             "optional": true,
             "version": "https://github.com/OS-Q/N27.git"
         },
-        "framework-K210": {
+        "framework-N28": {
+            "type": "framework",
+            "optional": true,
+            "version": "https://github.com/OS-Q/N28.git"
+        },
+        "framework-N29": {
             "type": "framework",
             "optional": true,
             "version": "https://github.com/OS-Q/N29.git"
         },
-        "framework-K210rtos": {
-            "type": "framework",
-            "optional": true,
-            "version": "https://github.com/OS-Q/N28.git"
+        "toolchain-kendryte210": {
+            "type": "toolchain",
+            "version": "~8.2.0"
         },
         "tool-kflash-kendryte210": {
             "type": "uploader",

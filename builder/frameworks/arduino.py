@@ -6,7 +6,7 @@ from SCons.Script import DefaultEnvironment
 
 env = DefaultEnvironment()
 
-FRAMEWORK_DIR = env.PioPlatform().get_package_dir("framework-K210arduino")
+FRAMEWORK_DIR = env.PioPlatform().get_package_dir("framework-N27")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
 SDK_DIR = join(FRAMEWORK_DIR, "cores", "arduino", "kendryte-standalone-sdk")
 
