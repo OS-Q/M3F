@@ -11,7 +11,7 @@
         "board_def": "BOARD_SIPEED_MAIX_ONE_DOCK"
     },
     "frameworks": [
-        "kendryte",
+        "spl",
         "freertos",
         "arduino"
     ],
