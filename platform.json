@@ -54,10 +54,11 @@
         "framework-N29": {
             "type": "framework",
             "optional": true,
-            "version": "https://github.com/OS-Q/N29.git"
+            "version": ">=0.5.6"
         },
         "toolchain-kendryte210": {
             "type": "toolchain",
+            "optional": true,
             "version": "~8.2.0"
         },
         "tool-kflash-kendryte210": {
