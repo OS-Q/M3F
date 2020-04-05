@@ -43,8 +43,7 @@
     "packages": {
         "framework-N27": {
             "type": "framework",
-            "optional": true,
-            "version": "https://github.com/OS-Q/N27.git"
+            "version": ">=0.3.9"
         },
         "framework-N28": {
             "type": "framework",

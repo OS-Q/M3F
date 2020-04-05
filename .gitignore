@@ -1,5 +1,4 @@
 *.db
-*.yml
 *.pyc
 __pycache__/
 .pio/

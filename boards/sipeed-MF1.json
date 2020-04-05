@@ -11,8 +11,8 @@
         "board_def": "BOARD_SIPEED_MF1"
     },
     "frameworks": [
-        "kendryte-standalone-sdk",
-        "kendryte-freertos-sdk"
+        "kendryte",
+        "freertos"
     ],
     "name": "Sipeed MF1 MF1",
     "upload": {
