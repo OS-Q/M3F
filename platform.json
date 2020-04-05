@@ -56,7 +56,7 @@
             "optional": true,
             "version": "https://github.com/OS-Q/N29.git"
         },
-        "toolchain-k210": {
+        "toolchain-kendryte210": {
             "type": "toolchain",
             "version": "~8.2.0"
         },
