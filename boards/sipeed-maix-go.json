@@ -11,8 +11,8 @@
         "board_def": "BOARD_SIPEED_MAIX_GO"
     },
     "frameworks": [
-        "kendryte",
-        "freertos",
+        "kendryte-standalone-sdk",
+        "kendryte-freertos-sdk",
         "arduino"
     ],
     "name": "Sipeed MAIX GO",
