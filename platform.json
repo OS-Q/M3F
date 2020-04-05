@@ -58,17 +58,14 @@
         },
         "toolchain-kendryte210": {
             "type": "toolchain",
-            "optional": true,
             "version": "~8.2.0"
         },
         "tool-kflash-kendryte210": {
             "type": "uploader",
-            "optional": true,
             "version": "~0.9.1"
         },
         "openocd-kendryte": {
             "type": "uploader",
-            "optional": true,
             "version": "^1.203.1"
         }
     }
