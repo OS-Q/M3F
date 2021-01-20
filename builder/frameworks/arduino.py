@@ -1,13 +1,13 @@
 
 
 import os
-from os.path import isdir, join 
+from os.path import isdir, join
 
 from SCons.Script import DefaultEnvironment
 
 env = DefaultEnvironment()
 
-FRAMEWORK_DIR = env.PioPlatform().get_package_dir("framework-maixduino")
+FRAMEWORK_DIR = env.PioPlatform().get_package_dir("A21")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
 SDK_DIR = join(FRAMEWORK_DIR, "cores", "arduino", "kendryte-standalone-sdk")
 
@@ -60,15 +60,15 @@ env.Append(
     LIBPATH = [
 
     ],
-    
-    LIBS = [ 
+
+    LIBS = [
         "c", "gcc", "m"
     ],
 
     LIBSOURCE_DIRS=[
         join(FRAMEWORK_DIR, "libraries")
     ],
-    
+
 )
 
 if not env.BoardConfig().get("build.ldscript", ""):
