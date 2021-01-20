@@ -1,11 +1,12 @@
 {
-    "name": "P16",
-    "title": "Platform P16",
+    "name": "P21",
+    "title": "Platform P21",
     "version": "1.2.4",
     "description": "Kendryte K210 is an AI capable RISCV64 dual core SoC.",
     "homepage": "https://kendryte.com/",
     "license": "Apache-2.0",
     "keywords": [
+        "OS-Q",
         "dev-platform",
         "Kendryte",
         "SoC",
@@ -18,30 +19,25 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/sipeed/platform-kendryte210.git"
+        "url": "https://github.com/OS-Q/P21.git"
     },
-    "authors": [{
-        "name": "Sipeed",
-        "email": "support@sipeed.com",
-        "url": "https://www.sipeed.com"
-    }],
     "frameworks": {
         "kendryte-standalone-sdk": {
-            "package": "framework-kendryte-standalone-sdk",
+            "package": "N21",
             "script": "builder/frameworks/kendryte-standalone-sdk.py",
             "description": "Kendryte Standalone SDK without OS support",
             "homepage": "https://github.com/kendryte/kendryte-standalone-sdk",
             "title": "Kendryte Standalone SDK"
         },
         "kendryte-freertos-sdk": {
-            "package": "framework-kendryte-freertos-sdk",
+            "package": "F21",
             "script": "builder/frameworks/kendryte-freertos-sdk.py",
             "description": "Kendryte SDK with FreeRTOS support",
             "homepage": "https://github.com/kendryte/kendryte-freertos-sdk",
             "title": "Kendryte FreeRTOS SDK"
         },
         "arduino":{
-            "package": "framework-maixduino",
+            "package": "A21",
             "script": "builder/frameworks/arduino.py"
         }
     },
@@ -51,23 +47,20 @@
             "owner": "platformio",
             "version": "~8.2.0"
         },
-        "framework-maixduino": {
+        "A21": {
             "type": "framework",
             "optional": true,
-            "owner": "platformio",
-            "version": "~0.3.9"
+            "version": "https://github.com/OS-Q/A21.git"
         },
-        "framework-kendryte-standalone-sdk": {
+        "N21": {
             "type": "framework",
             "optional": true,
-            "owner": "platformio",
-            "version": "~0.5.6"
+            "version": "https://github.com/OS-Q/N21.git"
         },
-        "framework-kendryte-freertos-sdk": {
+        "F21": {
             "type": "framework",
             "optional": true,
-            "owner": "platformio",
-            "version": "~0.7.0"
+            "version": "https://github.com/OS-Q/F21.git"
         },
         "tool-kflash-kendryte210": {
             "type": "uploader",
