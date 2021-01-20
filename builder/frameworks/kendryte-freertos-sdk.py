@@ -4,7 +4,7 @@ from SCons.Script import DefaultEnvironment
 
 env = DefaultEnvironment()
 
-FRAMEWORK_DIR = env.PioPlatform().get_package_dir("framework-N28")
+FRAMEWORK_DIR = env.PioPlatform().get_package_dir("framework-kendryte-freertos-sdk")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
 
 TOOLCHAIN_DIR = env.PioPlatform().get_package_dir("toolchain-kendryte210")
@@ -70,8 +70,6 @@ env.Append(
         "-Wl,--end-group",
         join(TOOLCHAIN_DIR, "lib", "gcc", "riscv64-unknown-elf", "8.2.0", "crti.o"),
         join(TOOLCHAIN_DIR, "lib", "gcc", "riscv64-unknown-elf", "8.2.0", "crtbegin.o"),
-        join(TOOLCHAIN_DIR, "lib", "gcc", "riscv64-unknown-elf", "8.2.0", "crtend.o"),
-        join(TOOLCHAIN_DIR, "lib", "gcc", "riscv64-unknown-elf", "8.2.0", "crtn.o")
     ],
 
     CPPPATH = [
@@ -112,6 +110,13 @@ env.Append(
 
 if not env.BoardConfig().get("build.ldscript", ""):
     env.Replace(LDSCRIPT_PATH=join(FRAMEWORK_DIR, "lds", "kendryte.ld"))
+
+env.Append(CRTEND=[
+    join(TOOLCHAIN_DIR, "lib", "gcc", "riscv64-unknown-elf", "8.2.0", "crtend.o"),
+    join(TOOLCHAIN_DIR, "lib", "gcc", "riscv64-unknown-elf", "8.2.0", "crtn.o")
+])
+
+env.Append(LINKCOM=" $CRTEND")
 
 #
 # Target: Build Core Library

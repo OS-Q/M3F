@@ -1,72 +1,85 @@
 {
-    "name": "H13",
-    "title": "H13",
-    "description": "Kendryte K210 AI RISCV64 SoC",
-    "url": "http://www.sipeed.com",
-    "homepage": "https://github.com/OS-Q/H13",
+    "name": "P16",
+    "title": "Platform P16",
+    "version": "1.2.4",
+    "description": "Kendryte K210 is an AI capable RISCV64 dual core SoC.",
+    "homepage": "https://kendryte.com/",
     "license": "Apache-2.0",
+    "keywords": [
+        "dev-platform",
+        "Kendryte",
+        "SoC",
+        "RISC-V",
+        "64bit",
+        "AI"
+    ],
     "engines": {
-        "platformio": "<5"
+        "platformio": "^5"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/OS-Q/H13.git"
+        "url": "https://github.com/sipeed/platform-kendryte210.git"
     },
     "authors": [{
-        "name": "qitas",
-        "email": "qitas@qitas.cn",
-        "url": "http://www.qitas.cn"
-      }],
-      "keywords": "H13,RISCV64,AI,K210,Kendryte",
-      "version": "1.2.1",
-    "packageRepositories": [
-        "http://182.61.61.133/link/toolchain/manifest.json",
-        "http://182.61.61.133/link/toolchain/openocd.json",
-        "http://182.61.61.133/link/framework/manifest.json",
-        "http://182.61.61.133/link/platformio.json",
-        "http://182.61.61.133/link/platform.json"
-    ],
+        "name": "Sipeed",
+        "email": "support@sipeed.com",
+        "url": "https://www.sipeed.com"
+    }],
     "frameworks": {
-        "kendryte": {
-            "package": "framework-N29",
-            "script": "builder/frameworks/kendryte.py"
+        "kendryte-standalone-sdk": {
+            "package": "framework-kendryte-standalone-sdk",
+            "script": "builder/frameworks/kendryte-standalone-sdk.py",
+            "description": "Kendryte Standalone SDK without OS support",
+            "homepage": "https://github.com/kendryte/kendryte-standalone-sdk",
+            "title": "Kendryte Standalone SDK"
         },
-        "freertos": {
-            "package": "framework-N28",
-            "script": "builder/frameworks/freertos.py"
+        "kendryte-freertos-sdk": {
+            "package": "framework-kendryte-freertos-sdk",
+            "script": "builder/frameworks/kendryte-freertos-sdk.py",
+            "description": "Kendryte SDK with FreeRTOS support",
+            "homepage": "https://github.com/kendryte/kendryte-freertos-sdk",
+            "title": "Kendryte FreeRTOS SDK"
         },
         "arduino":{
-            "package": "framework-N27",
+            "package": "framework-maixduino",
             "script": "builder/frameworks/arduino.py"
         }
     },
     "packages": {
-        "framework-N27": {
-            "type": "framework",
-            "optional": true,
-            "version": ">=0.3.9"
-        },
-        "framework-N28": {
-            "type": "framework",
-            "optional": true,
-            "version": ">=0.7.0"
-        },
-        "framework-N29": {
-            "type": "framework",
-            "optional": true,
-            "version": ">=0.5.6"
-        },
         "toolchain-kendryte210": {
             "type": "toolchain",
+            "owner": "platformio",
             "version": "~8.2.0"
+        },
+        "framework-maixduino": {
+            "type": "framework",
+            "optional": true,
+            "owner": "platformio",
+            "version": "~0.3.9"
+        },
+        "framework-kendryte-standalone-sdk": {
+            "type": "framework",
+            "optional": true,
+            "owner": "platformio",
+            "version": "~0.5.6"
+        },
+        "framework-kendryte-freertos-sdk": {
+            "type": "framework",
+            "optional": true,
+            "owner": "platformio",
+            "version": "~0.7.0"
         },
         "tool-kflash-kendryte210": {
             "type": "uploader",
+            "optional": true,
+            "owner": "platformio",
             "version": "~0.9.1"
         },
-        "openocd-kendryte": {
+        "tool-openocd-kendryte": {
             "type": "uploader",
-            "version": "^1.203.1"
+            "optional": true,
+            "owner": "platformio",
+            "version": "^1.203.0"
         }
     }
 }

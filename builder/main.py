@@ -2,7 +2,7 @@ import sys
 from os.path import join
 
 from SCons.Script import (ARGUMENTS, COMMAND_LINE_TARGETS, AlwaysBuild,
-                          Builder, Default, DefaultEnvironment)
+                            Builder, Default, DefaultEnvironment)
 
 
 env = DefaultEnvironment()
