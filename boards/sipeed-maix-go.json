@@ -12,7 +12,7 @@
     },
     "frameworks": [
         "native",
-        "kendryte-freertos-sdk",
+        "freertos",
         "arduino"
     ],
     "name": "Sipeed MAIX GO",

@@ -1,7 +1,7 @@
 {
     "name": "P71",
     "title": "Platform P71",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "description": "Kendryte K210 is an AI capable RISCV64 dual core SoC.",
     "homepage": "https://kendryte.com/",
     "license": "Apache-2.0",
@@ -29,11 +29,11 @@
             "homepage": "https://github.com/OS-Q/N71",
             "title": "Kendryte Standalone SDK"
         },
-        "kendryte-freertos-sdk": {
+        "freertos": {
             "package": "F71",
-            "script": "builder/frameworks/kendryte-freertos-sdk.py",
+            "script": "builder/frameworks/freertos.py",
             "description": "Kendryte SDK with FreeRTOS support",
-            "homepage": "https://github.com/kendryte/kendryte-freertos-sdk",
+            "homepage": "https://github.com/OS-Q/F71",
             "title": "Kendryte FreeRTOS SDK"
         },
         "arduino":{
