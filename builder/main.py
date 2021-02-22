@@ -127,7 +127,7 @@ elif upload_protocol in debug_tools:
     ])
     openocd_args = [
         f.replace("$PACKAGE_DIR",
-                  platform.get_package_dir("tool-openocd-kendryte") or "")
+                platform.get_package_dir("tool-openocd-kendryte") or "")
         for f in openocd_args
     ]
     env.Replace(

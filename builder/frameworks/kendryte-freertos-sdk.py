@@ -4,7 +4,7 @@ from SCons.Script import DefaultEnvironment
 
 env = DefaultEnvironment()
 
-FRAMEWORK_DIR = env.PioPlatform().get_package_dir("F21")
+FRAMEWORK_DIR = env.PioPlatform().get_package_dir("F71")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
 
 TOOLCHAIN_DIR = env.PioPlatform().get_package_dir("toolchain-kendryte210")
