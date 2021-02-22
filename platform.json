@@ -22,11 +22,11 @@
         "url": "https://github.com/OS-Q/P71.git"
     },
     "frameworks": {
-        "kendryte-standalone-sdk": {
+        "native": {
             "package": "N71",
-            "script": "builder/frameworks/kendryte-standalone-sdk.py",
+            "script": "builder/frameworks/native.py",
             "description": "Kendryte Standalone SDK without OS support",
-            "homepage": "https://github.com/kendryte/kendryte-standalone-sdk",
+            "homepage": "https://github.com/OS-Q/N71",
             "title": "Kendryte Standalone SDK"
         },
         "kendryte-freertos-sdk": {

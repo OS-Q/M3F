@@ -11,7 +11,7 @@
         "board_def": "BOARD_SIPEED_MAIX_BIT"
     },
     "frameworks": [
-        "kendryte-standalone-sdk",
+        "native",
         "kendryte-freertos-sdk",
         "arduino"
     ],

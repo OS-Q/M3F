@@ -9,7 +9,7 @@ env = DefaultEnvironment()
 
 FRAMEWORK_DIR = env.PioPlatform().get_package_dir("A71")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
-SDK_DIR = join(FRAMEWORK_DIR, "cores", "arduino", "kendryte-standalone-sdk")
+SDK_DIR = join(FRAMEWORK_DIR, "cores", "arduino", "native")
 
 env.SConscript("_bare.py", exports="env")
 
@@ -97,7 +97,7 @@ envsafe = env.Clone()
 libs.append(envsafe.BuildLibrary(
     join("$BUILD_DIR", "FrameworkArduino"),
     join(FRAMEWORK_DIR, "cores", "arduino"),
-    ["+<*>", "-<.git%s>" % os.sep, "-<.svn%s>" % os.sep, "-<kendryte-standalone-sdk/src/hello_world%s>" % os.sep]
+    ["+<*>", "-<.git%s>" % os.sep, "-<.svn%s>" % os.sep, "-<native/src/hello_world%s>" % os.sep]
 ))
 
 
