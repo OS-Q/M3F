@@ -11,8 +11,8 @@
         "board_def": "BOARD_SIPEED_MAIXDUINO"
     },
     "frameworks": [
-        "native",
-        "freertos",
+        "kendryte-standalone-sdk",
+        "kendryte-freertos-sdk",
         "arduino"
     ],
     "name": "Sipeed MAIXDUINO",

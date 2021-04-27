@@ -4,24 +4,23 @@
         "f_cpu": "400000000L",
         "mcu": "K210",
         "hwids": [
-            "0x1A86",
-            "0x7523"
+            "0x0403",
+            "0x6010"
         ],
-        "variant": "sipeed_maix_bit",
-        "board_def": "BOARD_SIPEED_MAIX_BIT"
+        "variant": "",
+        "board_def": "BOARD_SIPEED_MF1"
     },
     "frameworks": [
         "kendryte-standalone-sdk",
-        "kendryte-freertos-sdk",
-        "arduino"
+        "kendryte-freertos-sdk"
     ],
-    "name": "Sipeed MAIX BiT",
+    "name": "Sipeed MF1 MF1",
     "upload": {
         "maximum_ram_size": 6291456,
         "maximum_size": 16777216,
-        "burn_tool": "dan",
+        "burn_tool": "maixduino",
         "require_upload_port": true,
-        "speed": 2000000
+        "speed": 1500000
     },
     "url": "https://www.sipeed.com/",
     "vendor": "Sipeed"

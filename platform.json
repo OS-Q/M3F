@@ -1,15 +1,10 @@
 {
     "name": "P71",
-    "title": "Platform P71",
-    "version": "1.2.5",
+    "title": "Platform Kendryte K210",
+    "version": "1.2.4",
     "description": "Kendryte K210 is an AI capable RISCV64 dual core SoC.",
     "homepage": "https://kendryte.com/",
-    "license": "Apache-2.0",
-    "engines": {
-        "platformio": "^5"
-    },
     "keywords": [
-        "OS-Q",
         "dev-platform",
         "Kendryte",
         "SoC",
@@ -17,27 +12,36 @@
         "64bit",
         "AI"
     ],
+    "license": "Apache-2.0",
+    "engines": {
+        "platformio": "^5"
+    },
     "repository": {
         "type": "git",
-        "url": "https://github.com/OS-Q/P71.git"
+        "url": "https://github.com/sipeed/platform-kendryte210.git"
     },
+    "authors": [{
+        "name": "Sipeed",
+        "email": "support@sipeed.com",
+        "url": "https://www.sipeed.com"
+    }],
     "frameworks": {
-        "native": {
-            "package": "N71",
-            "script": "builder/frameworks/native.py",
+        "kendryte-standalone-sdk": {
+            "package": "framework-kendryte-standalone-sdk",
+            "script": "builder/frameworks/kendryte-standalone-sdk.py",
             "description": "Kendryte Standalone SDK without OS support",
-            "homepage": "https://github.com/OS-Q/N71",
+            "homepage": "https://github.com/kendryte/kendryte-standalone-sdk",
             "title": "Kendryte Standalone SDK"
         },
-        "freertos": {
-            "package": "F71",
-            "script": "builder/frameworks/freertos.py",
+        "kendryte-freertos-sdk": {
+            "package": "framework-kendryte-freertos-sdk",
+            "script": "builder/frameworks/kendryte-freertos-sdk.py",
             "description": "Kendryte SDK with FreeRTOS support",
-            "homepage": "https://github.com/OS-Q/F71",
+            "homepage": "https://github.com/kendryte/kendryte-freertos-sdk",
             "title": "Kendryte FreeRTOS SDK"
         },
         "arduino":{
-            "package": "A71",
+            "package": "framework-maixduino",
             "script": "builder/frameworks/arduino.py"
         }
     },
@@ -47,20 +51,23 @@
             "owner": "platformio",
             "version": "~8.2.0"
         },
-        "A71": {
+        "framework-maixduino": {
             "type": "framework",
             "optional": true,
-            "version": "https://github.com/OS-Q/A71.git"
+            "owner": "platformio",
+            "version": "~0.3.9"
         },
-        "N71": {
+        "framework-kendryte-standalone-sdk": {
             "type": "framework",
             "optional": true,
-            "version": "https://github.com/OS-Q/N71.git"
+            "owner": "platformio",
+            "version": "~0.5.6"
         },
-        "F71": {
+        "framework-kendryte-freertos-sdk": {
             "type": "framework",
             "optional": true,
-            "version": "https://github.com/OS-Q/F71.git"
+            "owner": "platformio",
+            "version": "~0.7.0"
         },
         "tool-kflash-kendryte210": {
             "type": "uploader",

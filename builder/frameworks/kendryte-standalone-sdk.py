@@ -6,7 +6,7 @@ from SCons.Script import DefaultEnvironment
 
 env = DefaultEnvironment()
 
-FRAMEWORK_DIR = env.PioPlatform().get_package_dir("N71")
+FRAMEWORK_DIR = env.PioPlatform().get_package_dir("framework-kendryte-standalone-sdk")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
 
 env.SConscript("_bare.py", exports="env")

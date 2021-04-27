@@ -1,15 +1,15 @@
 
 
 import os
-from os.path import isdir, join
+from os.path import isdir, join 
 
 from SCons.Script import DefaultEnvironment
 
 env = DefaultEnvironment()
 
-FRAMEWORK_DIR = env.PioPlatform().get_package_dir("A71")
+FRAMEWORK_DIR = env.PioPlatform().get_package_dir("framework-maixduino")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
-SDK_DIR = join(FRAMEWORK_DIR, "cores", "arduino", "native")
+SDK_DIR = join(FRAMEWORK_DIR, "cores", "arduino", "kendryte-standalone-sdk")
 
 env.SConscript("_bare.py", exports="env")
 
@@ -60,15 +60,15 @@ env.Append(
     LIBPATH = [
 
     ],
-
-    LIBS = [
+    
+    LIBS = [ 
         "c", "gcc", "m"
     ],
 
     LIBSOURCE_DIRS=[
         join(FRAMEWORK_DIR, "libraries")
     ],
-
+    
 )
 
 if not env.BoardConfig().get("build.ldscript", ""):
@@ -97,7 +97,7 @@ envsafe = env.Clone()
 libs.append(envsafe.BuildLibrary(
     join("$BUILD_DIR", "FrameworkArduino"),
     join(FRAMEWORK_DIR, "cores", "arduino"),
-    ["+<*>", "-<.git%s>" % os.sep, "-<.svn%s>" % os.sep, "-<native/src/hello_world%s>" % os.sep]
+    ["+<*>", "-<.git%s>" % os.sep, "-<.svn%s>" % os.sep, "-<kendryte-standalone-sdk/src/hello_world%s>" % os.sep]
 ))
 
 

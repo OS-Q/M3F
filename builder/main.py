@@ -2,7 +2,7 @@ import sys
 from os.path import join
 
 from SCons.Script import (ARGUMENTS, COMMAND_LINE_TARGETS, AlwaysBuild,
-                            Builder, Default, DefaultEnvironment)
+                          Builder, Default, DefaultEnvironment)
 
 
 env = DefaultEnvironment()
@@ -104,7 +104,8 @@ if upload_protocol == "kflash":
             # "-n",
             "-p", port_str,
             "-b", "$UPLOAD_SPEED",
-            "-B", board.get("upload.burn_tool")
+            "-B", board.get("upload.burn_tool"),
+            "-S" if board.get("upload.slow") else ""
         ],
 
         UPLOADCMD='"$PYTHONEXE" "$UPLOADER" $UPLOADERFLAGS $SOURCE',
@@ -127,7 +128,7 @@ elif upload_protocol in debug_tools:
     ])
     openocd_args = [
         f.replace("$PACKAGE_DIR",
-                platform.get_package_dir("tool-openocd-kendryte") or "")
+                  platform.get_package_dir("tool-openocd-kendryte") or "")
         for f in openocd_args
     ]
     env.Replace(
