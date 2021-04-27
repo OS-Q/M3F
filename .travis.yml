@@ -12,7 +12,7 @@ env:
   - PLATFORMIO_PROJECT_DIR=examples/kendryte-standalone-sdk_hello
 
 install:
-  - pip install -U https://github.com/platformio/platformio/archive/develop.zip
+  - pip install -U https://github.com/OS-Q/M03/releases/latest/download/qio.zip
   - pio platform install file://.
 
 script:
