@@ -1,0 +1,74 @@
+{
+    "name": "P71",
+    "title": "Platform Kendryte K210",
+    "version": "1.2.4",
+    "description": "Kendryte K210 is an AI capable RISCV64 dual core SoC.",
+    "homepage": "https://kendryte.com/",
+    "keywords": [
+        "dev-platform",
+        "Kendryte",
+        "SoC",
+        "RISC-V",
+        "64bit",
+        "AI"
+    ],
+    "license": "Apache-2.0",
+    "engines": {
+        "platformio": "^5"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sipeed/platform-kendryte210.git"
+    },
+    "frameworks": {
+        "kendryte-standalone-sdk": {
+            "package": "framework-kendryte-standalone-sdk",
+            "script": "extend/frameworks/kendryte-standalone-sdk.py"
+        },
+        "kendryte-freertos-sdk": {
+            "package": "framework-kendryte-freertos-sdk",
+            "script": "extend/frameworks/kendryte-freertos-sdk.py"
+        },
+        "arduino":{
+            "package": "framework-maixduino",
+            "script": "extend/frameworks/arduino.py"
+        }
+    },
+    "packages": {
+        "toolchain-kendryte210": {
+            "type": "toolchain",
+            "owner": "platformio",
+            "version": "~8.2.0"
+        },
+        "framework-maixduino": {
+            "type": "framework",
+            "optional": true,
+            "owner": "platformio",
+            "version": "~0.3.9"
+        },
+        "framework-kendryte-standalone-sdk": {
+            "type": "framework",
+            "optional": true,
+            "owner": "platformio",
+            "version": "~0.5.6"
+        },
+        "framework-kendryte-freertos-sdk": {
+            "type": "framework",
+            "optional": true,
+            "owner": "platformio",
+            "version": "~0.7.0"
+        },
+        "tool-kflash-kendryte210": {
+            "type": "uploader",
+            "optional": true,
+            "owner": "platformio",
+            "version": "~0.9.1"
+        },
+        "tool-openocd-kendryte": {
+            "type": "uploader",
+            "optional": true,
+            "owner": "platformio",
+            "version": "^1.203.0"
+        }
+    }
+}
