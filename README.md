@@ -8,7 +8,7 @@
 
 ### [简介](https://github.com/OS-Q/P71/wiki)
 
-[P71](https://github.com/OS-Q/P71) 适用于 [K210](https://www.st.com/zh/microcontrollers-microprocessors/stm8s-series.html) 开发
+[P71](https://github.com/OS-Q/P71) 适用于 [K210](https://canaan-creative.com/product/kendryteai) 开发
 
 ### [源圈 OS-Q (Open Source & QA) ](http://www.OS-Q.com)
 
