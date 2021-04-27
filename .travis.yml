@@ -1,7 +1,10 @@
 language: python
 python:
-  - "2.7"
-  - "3.6"
+  - "3.9"
+os:
+  - linux
+git:
+  depth: 1
 
 env:
   - PLATFORMIO_PROJECT_DIR=examples/arduino-blink
@@ -9,8 +12,11 @@ env:
   - PLATFORMIO_PROJECT_DIR=examples/kendryte-standalone-sdk_hello
 
 install:
-  - pip install -U https://github.com/OS-Q/S03/archive/master.zip
-  - platformio platform install file://.
+  - pip install -U https://github.com/platformio/platformio/archive/develop.zip
+  - pio platform install file://.
 
 script:
-  - platformio run -d $PLATFORMIO_PROJECT_DIR
+  - pio run -s -d $PLATFORMIO_PROJECT_DIR
+
+notifications:
+  email: false
