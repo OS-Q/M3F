@@ -22,7 +22,7 @@
     },
     "frameworks": {
         "kendryte-standalone-sdk": {
-            "package": "E71",
+            "package": "standalone",
             "script": "extend/frameworks/kendryte-standalone-sdk.py"
         },
         "kendryte-freertos-sdk": {
@@ -49,6 +49,11 @@
             "type": "framework",
             "optional": true,
             "version": "https://github.com/OS-Q/E71.git"
+        },
+        "standalone": {
+            "type": "framework",
+            "optional": true,
+            "version": "https://github.com/OS-Q/E71/archive/standalone.zip"
         },
         "tool-kflash-kendryte210": {
             "type": "uploader",
