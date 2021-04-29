@@ -1,6 +1,6 @@
 {
     "name": "P71",
-    "title": "Platform Kendryte K210",
+    "title": "Kendryte RISCV64 K210 AI SoC",
     "version": "1.2.4",
     "description": "Kendryte K210 is an AI capable RISCV64 dual core SoC.",
     "homepage": "https://kendryte.com/",
@@ -30,7 +30,7 @@
             "script": "extend/frameworks/kendryte-freertos-sdk.py"
         },
         "arduino":{
-            "package": "framework-maixduino",
+            "package": "A71",
             "script": "extend/frameworks/arduino.py"
         }
     },
@@ -40,11 +40,10 @@
             "owner": "platformio",
             "version": "~8.2.0"
         },
-        "framework-maixduino": {
+        "A71": {
             "type": "framework",
             "optional": true,
-            "owner": "platformio",
-            "version": "~0.3.9"
+            "version": "https://github.com/OS-Q/A71.git"
         },
         "framework-kendryte-standalone-sdk": {
             "type": "framework",
