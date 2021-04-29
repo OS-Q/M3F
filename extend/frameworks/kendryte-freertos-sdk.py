@@ -4,7 +4,7 @@ from SCons.Script import DefaultEnvironment
 
 env = DefaultEnvironment()
 
-FRAMEWORK_DIR = env.PioPlatform().get_package_dir("framework-kendryte-freertos-sdk")
+FRAMEWORK_DIR = env.PioPlatform().get_package_dir("E71")
 assert FRAMEWORK_DIR and isdir(FRAMEWORK_DIR)
 
 TOOLCHAIN_DIR = env.PioPlatform().get_package_dir("toolchain-kendryte210")
@@ -150,7 +150,7 @@ libs = [
     env.BuildLibrary(
         join("$BUILD_DIR", "third_party-lwipcore"),
         join(FRAMEWORK_DIR, "third_party", "lwip", "src", "core")),
-        
+
     env.BuildLibrary(
         join("$BUILD_DIR", "third_party-lwipapi"),
         join(FRAMEWORK_DIR, "third_party", "lwip", "src", "api")),
