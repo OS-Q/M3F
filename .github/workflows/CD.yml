@@ -386,7 +386,6 @@ jobs:
         working-directory: examples
         run: |
           rm -rf .git*
-          rm  .gitignore
 
       - name: Setup Folder
         uses: Qful/ossutil-action@master
