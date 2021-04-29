@@ -1,17 +1,16 @@
-name: CI
+name: QIO
 
 on:
   push:
     branches:
-      - master
-      - main
+      - qio
     paths:
       - 'boards/**'
-      - 'builder/**'
       - 'extend/**'
       - 'examples/**'
-      - '**.json'
-      - '**.py'
+      - 'link.json'
+      - 'link.py'
+
 
 jobs:
   CodeCheck:
@@ -27,7 +26,7 @@ jobs:
       uses: Qful/check-action@master
       with:
         github_token: ${{ secrets.OSQ_REPO_TOKEN }}
-        enable: all #performance,portability,warning
+        enable: all
         inconclusive: disable
         inline_suppression: disable
         force_language: c
@@ -49,7 +48,7 @@ jobs:
         name: code_check_report
         path: codecheck.txt
 
-  build:
+  QIO:
     strategy:
       fail-fast: false
       matrix:
@@ -57,7 +56,6 @@ jobs:
           - "arduino-blink"
           - "kendryte-freertos-sdk_hello"
           - "kendryte-standalone-sdk_hello"
-        package: ["pio","qio"]
         os: [ubuntu-latest, windows-latest, macos-latest]
 
     runs-on: ${{ matrix.os }}
@@ -72,17 +70,11 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: Install qio
-        if: matrix.package == 'qio'
+      - name: Install package
         run: |
+          python -m pip install --upgrade pip
           pip install -U https://github.com/OS-Q/M03/releases/latest/download/qio.zip
-          qio platform install file://.
-
-      - name: Install pio
-        if: matrix.package == 'pio'
-        run: |
-          pip install -U https://github.com/platformio/platformio/archive/develop.zip
-          pio platform install file://.
+          qio platform install https://github.com/OS-Q/P71/archive/qio.zip
 
       - name: Build examples
         id: build
@@ -90,3 +82,21 @@ jobs:
         working-directory: examples
         run: |
           pio run -d ${{ matrix.example }}
+
+
+  QIO_fail:
+    needs:
+      - QIO
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: notification
+        uses: Qful/mqtt-action@master
+        with:
+          protocol: mqtt
+          host: ${{secrets.MQTT_SERVER}}
+          port: 1883
+          username: ${{secrets.MQTT_USERNAME}}
+          password: ${{secrets.MQTT_PASSWORD}}
+          topic: ${{github.repository}}/${{github.workflow}}
+          message: "QIO failure"
