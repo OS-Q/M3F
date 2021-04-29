@@ -9,7 +9,7 @@ steps:
   - apt install -y git
   - git submodule update --init --recursive
   - pip install -U https://github.com/platformio/platformio/archive/develop.zip
-  - pio platform install file://.
+  - pio platform install https://github.com/OS-Q/P71/archive/pio.zip
   - pio run -d examples/arduino-blink
   - pio run -d examples/kendryte-freertos-sdk_hello
   - pio run -d examples/kendryte-standalone-sdk_hello
