@@ -7,7 +7,7 @@
             "0x0403",
             "0x6010"
         ],
-        "variant": "",
+        "variant": "sipeed_mf1",
         "board_def": "BOARD_SIPEED_MF1"
     },
     "frameworks": [
