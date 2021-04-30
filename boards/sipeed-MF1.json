@@ -12,9 +12,10 @@
     },
     "frameworks": [
         "kendryte-standalone-sdk",
-        "kendryte-freertos-sdk"
+        "kendryte-freertos-sdk",
+        "arduino"
     ],
-    "name": "Sipeed MF1 MF1",
+    "name": "Sipeed MF1",
     "upload": {
         "maximum_ram_size": 6291456,
         "maximum_size": 16777216,
