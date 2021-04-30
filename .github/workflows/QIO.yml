@@ -82,21 +82,3 @@ jobs:
         working-directory: examples
         run: |
           pio run -d ${{ matrix.example }}
-
-
-  QIO_fail:
-    needs:
-      - QIO
-    if: failure()
-    runs-on: ubuntu-latest
-    steps:
-      - name: notification
-        uses: Qful/mqtt-action@master
-        with:
-          protocol: mqtt
-          host: ${{secrets.MQTT_SERVER}}
-          port: 1883
-          username: ${{secrets.MQTT_USERNAME}}
-          password: ${{secrets.MQTT_PASSWORD}}
-          topic: ${{github.repository}}/${{github.workflow}}
-          message: "QIO failure"
