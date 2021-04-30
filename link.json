@@ -22,11 +22,11 @@
     },
     "frameworks": {
         "kendryte-standalone-sdk": {
-            "package": "standalone",
+            "package": "E71",
             "script": "extend/frameworks/kendryte-standalone-sdk.py"
         },
         "kendryte-freertos-sdk": {
-            "package": "E71",
+            "package": "X71",
             "script": "extend/frameworks/kendryte-freertos-sdk.py"
         },
         "arduino":{
@@ -50,10 +50,10 @@
             "optional": true,
             "version": "https://github.com/OS-Q/E71.git"
         },
-        "standalone": {
+        "X71": {
             "type": "framework",
             "optional": true,
-            "version": "https://github.com/OS-Q/E71/archive/standalone.zip"
+            "version": "https://github.com/OS-Q/X71.git"
         },
         "tool-kflash-kendryte210": {
             "type": "uploader",
